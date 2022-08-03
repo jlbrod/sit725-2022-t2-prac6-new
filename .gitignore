@@ -1,5 +1,0 @@
-# ignore package-lock.json
-package-lock.json
-
-# Dependency directories
-node_modules/
