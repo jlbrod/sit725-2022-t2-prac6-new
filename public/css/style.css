@@ -1,0 +1,52 @@
+p {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-weight: 200;
+  }
+
+h1 {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-weight: 300;
+}
+
+h4 {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-weight: 300;
+  }
+
+.navbar-size {
+    width: 95%;
+    margin: 0 auto;
+}
+.user-image-size {
+    height: 56px;
+    margin: 4px 0;
+}
+.main-body {
+    background-color: #e3f2fd;
+    color: white;
+    height: 100%;
+}
+.materialboxed-image {
+    margin: 0 auto;
+    max-width: 20%;
+}
+.click-me-button {
+    background-color: #6ea5ee;
+    margin-top: 50px;
+}
+
+.click-me-login-button {
+    background-color: #eee16e;
+    
+    margin-top: 50px;
+}
+.card-desc-color {
+    color: #808080;
+}
+
+nav {
+    background-color: #0d47a1;
+}
