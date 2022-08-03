@@ -21,7 +21,7 @@ h4 {
     margin: 0 auto;
 }
 .user-image-size {
-    height: 56px;
+    height: 50px;
     margin: 4px 0;
 }
 .main-body {
@@ -31,7 +31,7 @@ h4 {
 }
 .materialboxed-image {
     margin: 0 auto;
-    max-width: 20%;
+    max-width: 70%;
 }
 .click-me-button {
     background-color: #6ea5ee;

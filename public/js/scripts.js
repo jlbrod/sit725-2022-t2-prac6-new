@@ -13,6 +13,13 @@ const cardList = [
         desciption: "This was an adorable children’s story. Another one found on a shelf while staying with friends. I’m younger than the Bill and Ben era so a bit of a new find",
     },
 
+    {
+        title: "The Hobbit: Deluxe Edition Hardcover",
+        image: "images/thehobbitdelux.jpg",
+        link: "click for more",
+        desciption: "This deluxe slipcased edition of The Hobbit, printed and bound using superior materials including a silk ribbon marker, features the definitive text, plus Tolkien’s paintings and drawings in full colour, and a special fold-out version of Thror’s Map. Bilbo Baggins enjoys a quiet and contented life, with no desire to travel far from the comforts of home; then one day the wizard Gandalf and a band of dwarves arrive unexpectedly and enlist his services – as a burglar – on a dangerous expedition to raid the treasure-hoard of Smaug the dragon. Bilbo’s life is never to be the same again.",
+    },
+
 ]
 
 const addCards = (items) => {
