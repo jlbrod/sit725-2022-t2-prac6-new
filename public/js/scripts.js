@@ -10,7 +10,7 @@ const cardList = [
         title: "Bill and Ben the Flowerpot Men",
         image: "images/billandbenbook.jpg",
         link: "click for more",
-        desciption: "This was an adorable children’s story. Another one found on a shelf while staying with friends. I’m younger than the Bill and Ben era so a bit of a new find",
+        desciption: "This was an adorable children's story. Another one found on a shelf while staying with friends. I’m younger than the Bill and Ben era so a bit of a new find",
     },
 
     {
@@ -52,6 +52,17 @@ const submitForm = () => {
     console.log("Form Data Submitted: ", formData);
 }
 
+
+//addCards(cardList) - P4 
+
+const getProjects = () => {
+    $.get('/api/projects',(response) => {
+        if(response.statusCode==200){
+            addCards(response.data);
+        }
+    })
+}
+
 $(document).ready(function(){
     $('.materialboxed').materialbox();
     addCards(cardList);
@@ -59,5 +70,9 @@ $(document).ready(function(){
     $('#formSubmit').click(()=>{
         submitForm();
     })
-})
+    getProjects();
+    
+
+
+});
 
