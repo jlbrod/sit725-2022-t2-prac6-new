@@ -9,30 +9,30 @@ app.use(express.urlencoded({ extended: false }));
 
 
 // Import card list code from last practical - 
-const cardList = [​
+const cardList = [
 
-    {​
-        title: "Kitten 2",​
-        image: "images/kitten-2.jpg",​
-        link: "About Kitten 2",​
-        desciption: "Demo desciption about kitten 2"​
+    {
+        title: "Kitten 2",
+        image: "images/kitten-2.jpg",
+        link: "About Kitten 2",
+        desciption: "Demo desciption about kitten 2",
 
-    },​
+    },
 
-    {​
+    {
 
-        title: "Kitten 3",​
-        image: "images/kitten-3.jpg",​
-        link: "About Kitten 3",​
-        desciption: "Demo desciption about kitten 3"​
+        title: "Kitten 3",
+        image: "images/kitten-3.jpg",
+        link: "About Kitten 3",
+        desciption: "Demo desciption about kitten 3"
 
-    }​
+    }
 ]
 
 //get API call
 
-app.get('/api/projects',(req,res) => {​
-    res.json({statusCode: 200, data: cardList, message:"Success"})​
+app.get('/api/projects',(req,res) => {
+    res.json({statusCode: 200, data: cardList, message:"Success"})
 
 })
 

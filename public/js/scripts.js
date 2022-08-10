@@ -66,13 +66,10 @@ const getProjects = () => {
 $(document).ready(function(){
     $('.materialboxed').materialbox();
     addCards(cardList);
-    $('.modal').modal();
     $('#formSubmit').click(()=>{
         submitForm();
     })
     getProjects();
-    
-
-
+    $('.modal').modal();
 });
 
