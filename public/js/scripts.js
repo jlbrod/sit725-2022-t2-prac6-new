@@ -41,18 +41,6 @@ const clickMe = () => {
 }
 
 
-
-const submitForm = () => {
-    let formData = {};
-    formData.first_name = $('#first_name').val();
-    formData.last_name = $('#last_name').val();
-    formData.password = $('#password').val();
-    formData.email = $('#email').val();
-
-    console.log("Form Data Submitted: ", formData);
-}
-
-
 //addCards(cardList) - P4 
 
 const getProjects = () => {
@@ -62,6 +50,31 @@ const getProjects = () => {
         }
     })
 }
+
+//ajax function to add project
+const addProjectToApp = (project) => {
+    $.ajax({
+        url: '/api/projects',
+        data: project,
+        type: 'POST',
+        success: (result) => {
+            alert(result.message);
+            location.reload(); // then reload page
+        }
+    })
+}
+
+const submitForm = () => {
+    let formData = {};
+    formData.first_name = $('#first_name').val();
+    formData.last_name = $('#last_name').val();
+    formData.password = $('#password').val();
+    formData.email = $('#email').val();
+
+    console.log("Form Data Submitted: ", formData);
+    addProjectToApp(formData);
+}
+
 
 $(document).ready(function(){
     $('.materialboxed').materialbox();
