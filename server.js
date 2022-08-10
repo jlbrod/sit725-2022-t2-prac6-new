@@ -1,9 +1,18 @@
 const express = require("express")
 const app = express()
+const MongoClient = require('mongoDb').MongoClient;
+var cors = require('cors')
+
+//Connect to mongoDB
+const uri = process.env.MONGO_URI
+const client = new MongoClient(uri,{ useNewUrlParser: true })
+
 
 app.use(express.static(__dirname+'/public'))
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(cors())
+
 
 
 
