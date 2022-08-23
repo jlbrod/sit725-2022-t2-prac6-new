@@ -1,3 +1,4 @@
+
 const cardList = [
     {
         title: "Harry Potter and  the Deathly Hallows",
@@ -78,7 +79,7 @@ const submitForm = () => {
 
 $(document).ready(function(){
     $('.materialboxed').materialbox();
-    addCards(cardList);
+   // addCards(cardList);
     $('#formSubmit').click(()=>{
         submitForm();
     })
