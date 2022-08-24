@@ -28,7 +28,18 @@ const createColllection = (collectionName) => {
     })
 }
    
-
+const createUserColllection = (collectionName) => {
+    client.connect((err,db) => {
+        projectCollection = client.db().collection(collectionName);
+        if(!err) {
+            console.log('MongoDB Connected')
+        }
+        else {
+            console.log("DB Error: ", err);
+            process.exit(1);
+        }
+    })
+}
 
 
 //insert project......
@@ -74,6 +85,7 @@ var port = process.env.port || 3000;
 app.listen(port,()=>{
     console.log("App listening to: "+port)
     createColllection('Books')
+    createUserColllection('Users')
 })
 
 

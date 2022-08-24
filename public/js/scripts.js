@@ -90,11 +90,22 @@ const submitForm = () => {
 
 $(document).ready(function(){
     $('.materialboxed').materialbox();
-   // addCards(cardList);
-    $('#formSubmit').click(()=>{
+    $('#formSubmit2').click(()=>{
         submitForm();
     })
+    //addCards(cardList);
     getProjects();
     $('.modal').modal();
-});
+  });
+
+
+  $(document).ready(function(){
+    $('.materialboxed').materialbox();
+    $('#formSubmit').click(()=>{
+        submitUserForm();
+    })
+    //addCards(cardList);
+    getProjects();
+    $('.modal').modal();
+  });
 
