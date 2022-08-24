@@ -104,8 +104,5 @@ $(document).ready(function(){
     $('#formSubmit').click(()=>{
         submitUserForm();
     })
-    //addCards(cardList);
-    getProjects();
-    $('.modal').modal();
   });
 
