@@ -1,3 +1,25 @@
+const getProjects = () => {
+    $.get('/api/projects',(response) => {
+        if(response.statusCode==200){
+            addCards(response.data);
+        }
+    })
+}
+
+//ajax function to add project
+const addProjectToApp = (project) => {
+    $.ajax({
+        url: '/api/projects',
+        data: project,
+        type: 'POST',
+        success: (result) => {
+            alert(result.message);
+            location.reload(); // it automatically reloads the page 
+        }
+    })
+}
+
+
 
 const cardList = [
     {
@@ -42,35 +64,24 @@ const clickMe = () => {
 }
 
 
-//addCards(cardList) - P4 
-
-const getProjects = () => {
-    $.get('/api/projects',(response) => {
-        if(response.statusCode==200){
-            addCards(response.data);
-        }
-    })
-}
-
-//ajax function to add project
-const addProjectToApp = (project) => {
-    $.ajax({
-        url: '/api/projects',
-        data: project,
-        type: 'POST',
-        success: (result) => {
-            alert(result.message);
-            location.reload(); // then reload page
-        }
-    })
-}
-
-const submitForm = () => {
+const submitUserForm = () => {
     let formData = {};
     formData.first_name = $('#first_name').val();
     formData.last_name = $('#last_name').val();
     formData.password = $('#password').val();
     formData.email = $('#email').val();
+
+    console.log("Form Data Submitted: ", formData);
+    addProjectToApp(formData);
+}
+
+
+const submitForm = () => {
+    let formData = {};
+    formData.title = $('#title').val();
+    formData.image = $('#image').val();
+    formData.link = $('#link').val();
+    formData.description = $('#description').val();
 
     console.log("Form Data Submitted: ", formData);
     addProjectToApp(formData);
