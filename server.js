@@ -80,20 +80,6 @@ app.post('/api/projects',(req,res) => {
     })
 })
 
-//post user details
-app.post('/api/projects',(req,res) => {
-    console.log("New Project added", req.body)
-    var newProject = req.body;
-    insertProjects(newProject,(err,result) => {
-        if(err) {
-            res.json({statusCode: 400, message: err})
-        }
-        else {
-            res.json({statusCode: 200, message:"Project Successfully added", data: result})
-        }
-    })
-})
-
 var port = process.env.port || 3000;
 
 app.listen(port,()=>{
