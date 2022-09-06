@@ -10,8 +10,17 @@ app.use(cors())
 
 //testing for Prac6
 app.get('/addNumber/:n1/:n2', function(request, response){
-    response.sendStatus(200)
-});
+    response.sendStatus(200);
+})
+
+app.get('/addTwoNumbers/:n1/:n2', function(request, response){
+
+    response.json({statusCode: 200}); })
+
+
+app.get('/projects/:array', function(request, response){
+
+    response.json({statusCode: 200}); })
 
 
 //Connect to mongoDB
