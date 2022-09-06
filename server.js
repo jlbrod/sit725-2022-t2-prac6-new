@@ -8,9 +8,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cors())
 
-const MongoClient = require('mongodb').MongoClient
+//testing for Prac6
+app.get('/addNumber/:n1/:n2', function(request, response){
+    response.statusCode(200)
+});
+
 
 //Connect to mongoDB
+const MongoClient = require('mongodb').MongoClient
 const uri = "mongodb+srv://admin:123qwe@cluster0.1henban.mongodb.net/?retryWrites=true&w=majority"
 const client = new MongoClient(uri,{ useNewUrlParser: true })
 
