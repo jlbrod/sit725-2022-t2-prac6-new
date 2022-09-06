@@ -10,7 +10,7 @@ app.use(cors())
 
 //testing for Prac6
 app.get('/addNumber/:n1/:n2', function(request, response){
-    response.statusCode(200)
+    response.sendStatus(200)
 });
 
 
