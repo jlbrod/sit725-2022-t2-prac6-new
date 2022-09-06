@@ -91,7 +91,7 @@ it("should return status 200", function(done) {
 it("returns the result as array", function(done) {
     request(url, function(error, response, body) {
         body = JSON.parse(body)
-        expect(body).to.be.an('array');
+        expect(body.data).to.be.an('array');
         done()
       });
 });
