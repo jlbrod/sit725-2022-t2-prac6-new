@@ -18,7 +18,7 @@ app.get('/addTwoNumbers/:n1/:n2', function(request, response){
     response.json({statusCode: 200}); })
 
 
-app.get('/projects/:array', function(request, response){
+app.get('/api/projects/:array', function(request, response){
 
     response.json({statusCode: 200}); })
 
